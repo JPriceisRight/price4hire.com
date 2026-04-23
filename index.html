@@ -50,61 +50,110 @@
             backdrop-filter: blur(20px);
             background-color: rgba(2, 6, 23, 0.6);
         }
+        .form-input {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            color: white;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .form-input:focus {
+            border-color: var(--teal-accent);
+        }
+        .credential-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        .credential-value {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 14px;
+            color: white;
+            letter-spacing: 0.1em;
+        }
+        .liquid-glass-card {
+            background: rgba(2, 6, 23, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            padding: 2rem;
+            transition: all 0.4s ease;
+            display: block;
+            text-decoration: none;
+        }
+        .liquid-glass-card:hover {
+            background: rgba(45, 212, 191, 0.1);
+            border-color: rgba(45, 212, 191, 0.5);
+            transform: translateY(-5px);
+        }
+        .qr-box {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        #qr-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
 
         /* Teal Glassmorphism Scrollodex */
-    .tech-footer {
-        background: rgba(2, 6, 23, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-top: 1px solid rgba(45, 212, 191, 0.3);
-        padding: 20px 0;
-        overflow-x: auto;
-        white-space: nowrap;
-        scrollbar-width: thin;
-        scrollbar-color: #2dd4bf #020617;
-        position: relative;
-        z-width: 100%;
-    }
-    
-    /* Custom Sleek Scrollbar */
-    .tech-footer::-webkit-scrollbar {
-        height: 4px;
-    }
-    .tech-footer::-webkit-scrollbar-track {
-        background: #020617;
-    }
-    .tech-footer::-webkit-scrollbar-thumb {
-        background-color: #2dd4bf;
-        border-radius: 10px;
-    }
-
-    .footer-grid {
-        display: inline-flex;
-        gap: 40px;
-        padding: 0 40px;
-        align-items: center;
-    }
-    
-    .footer-grid a {
-        color: #2dd4bf;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        font-size: 13px;
-        transition: all 0.3s ease;
-    }
-    
-    .footer-grid a:hover {
-        color: #fff;
-        text-shadow: 0 0 12px rgba(45, 212, 191, 0.8);
-    }
+        .tech-footer {
+            background: rgba(2, 6, 23, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(45, 212, 191, 0.3);
+            padding: 20px 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: thin;
+            scrollbar-color: #2dd4bf #020617;
+            position: relative;
+            width: 100%;
+        }
+        .tech-footer::-webkit-scrollbar {
+            height: 4px;
+        }
+        .tech-footer::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        .tech-footer::-webkit-scrollbar-thumb {
+            background-color: #2dd4bf;
+            border-radius: 10px;
+        }
+        .footer-grid {
+            display: inline-flex;
+            gap: 40px;
+            padding: 0 40px;
+            align-items: center;
+        }
+        .footer-grid a {
+            color: #2dd4bf;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+        .footer-grid a:hover {
+            color: #fff;
+            text-shadow: 0 0 12px rgba(45, 212, 191, 0.8);
+        }
     </style>
 </head>
 <body>
     <div id="qr-modal" onclick="toggleQR()">
         <div class="space-y-6 flex flex-col items-center text-center">
             <div class="qr-box">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://price4hire.netlify.app" alt="Price 4 Hire QR">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://price4hire.com" alt="Price 4 Hire QR">
             </div>
             <p class="font-sleek text-[10px] blue-accent tracking-widest">Scan to Connect</p>
             <p class="text-[8px] text-slate-500 uppercase tracking-widest">Tap anywhere to close</p>
@@ -213,6 +262,16 @@
         </div>
     </section>
 
+    <div class="tech-footer">
+        <div class="footer-grid">
+            <a href="https://www.invisible.co/" target="_blank">AI Training (Invisible Tech)</a>
+            <a href="https://www.imdb.com/" target="_blank">Composition (HBO Max)</a>
+            <a href="https://scale.com/" target="_blank">Annotation (Scale AI)</a>
+            <a href="https://www.voices.com/" target="_blank">Voiceover (Voices.com)</a>
+            <a href="https://muso.ai/" target="_blank">Publishing (Price Royalty Publishing)</a>
+        </div>
+    </div>
+
     <footer class="py-12 px-8 border-t border-white/5 bg-black/20">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center opacity-30">
@@ -243,23 +302,5 @@
             modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
         }
     </script>
-    <footer class="tech-footer">
-        <div class="footer-grid">
-            <a href="https://www.invisible.co/" target="_blank">AI Training (Invisible Tech)</a>
-            <a href="https://www.imdb.com/" target="_blank">Composition (HBO Max)</a>
-            <a href="https://scale.com/" target="_blank">Annotation (Scale AI)</a>
-            <a href="https://www.voices.com/" target="_blank">Voiceover (Voices.com)</a>
-            <a href="https://muso.ai/" target="_blank">Publishing (Price Royalty Publishing)</a>
-        </div>
-    </footer>
-    <section id="contact-section" class="contact-section">
-        <h2>Connect With Jeseka</h2>
-        <form action="/success.html" method="POST" name="contact" data-netlify="true">
-            <input type="text" name="name" placeholder="FULL NAME" required>
-            <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
-            <textarea name="message" placeholder="PROJECT DETAILS" required></textarea>
-            <button type="submit">Submit Transmission</button>
-        </form>
-    </section>
 </body>
 </html>
