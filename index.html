@@ -5,126 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price 4 Hire | Technical Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
     <style>
-        body { background-color: #020617; color: white; font-family: 'Inter', sans-serif; margin: 0; }
+        :root { --teal: #2dd4bf; --dark-bg: #020617; }
+        body { background-color: var(--dark-bg); color: white; font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
         .font-sleek { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
         
-        /* THE MAGIC GLOW CSS */
+        /* NAVIGATION */
+        nav { padding: 20px; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; z-index: 100; background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(10px); }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 10px; letter-spacing: 2px; font-weight: bold; }
+
+        /* HERO SECTION */
+        #hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden; }
+        #hero video { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; z-index: -1; opacity: 0.4; }
+
+        /* LIQUID GLASS CARDS & GRID */
         .liquid-glass-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(0, 128, 128, 0.3);
             backdrop-filter: blur(10px);
-            border-radius: 15px;
+            border-radius: 12px;
             padding: 20px;
             text-align: center;
-            transition: 0.4s;
+            transition: 0.4s ease;
             box-shadow: 0 0 15px rgba(0, 128, 128, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        .liquid-glass-card:hover {
-            border-color: #2dd4bf;
-            box-shadow: 0 0 25px rgba(45, 212, 191, 0.2);
-            transform: translateY(-5px);
-        }
-        .credential-title { color: #888; font-size: 10px; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; }
-        .credential-value { color: #2dd4bf; font-size: 13px; font-weight: 700; }
+        .liquid-glass-card:hover { border-color: var(--teal); box-shadow: 0 0 25px rgba(45, 212, 191, 0.2); transform: translateY(-5px); }
+        .credential-title { color: #888; font-size: 9px; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; }
+        .credential-value { color: var(--teal); font-size: 12px; font-weight: 700; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); gap: 12px; max-width: 1000px; margin: 0 auto; }
+
+        /* CONTACT FORM */
+        input, textarea { background: rgba(0,0,0,0.3); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px; width: 100%; box-sizing: border-box; }
+        button { background: #008080; color: white; border: none; padding: 15px; border-radius: 5px; cursor: pointer; width: 100%; transition: 0.3s; }
+        button:hover { background: var(--teal); }
     </style>
 </head>
 <body>
 
-<section id="credits" style="padding: 60px 20px;">
-    <h2 class="font-sleek" style="text-align: center; color: #2dd4bf; margin-bottom: 40px; letter-spacing: 3px;">PROFESSIONAL CREDITS</h2>
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; max-width: 1100px; margin: 0 auto;">
-        
+<nav>
+    <div class="font-sleek" style="color: var(--teal); font-size: 14px;">PRICE ROYALTY</div>
+    <div class="nav-links font-sleek">
+        <a href="#credits">CREDITS</a>
+        <a href="#contact-section">CONTACT</a>
+    </div>
+</nav>
+
+<section id="hero">
+    <video autoplay muted loop playsinline><source src="hero-bg.mp4" type="video/mp4"></video>
+    <h1 class="font-sleek" style="font-size: 3rem; margin-bottom: 10px; letter-spacing: 10px;">JESEKA PRICE</h1>
+    <p class="font-sleek" style="color: var(--teal); font-size: 10px; letter-spacing: 4px;">Multimodal Physics & Generative Intelligence</p>
+</section>
+
+<section id="credits" style="padding: 60px 15px;">
+    <h2 class="font-sleek" style="text-align: center; color: var(--teal); margin-bottom: 40px; letter-spacing: 3px; font-size: 1.2rem;">PROFESSIONAL CREDITS</h2>
+    <div class="grid">
         <a href="https://www.invisible.co/" target="_blank" class="liquid-glass-card" style="text-decoration: none;">
             <div class="credential-title">AI TRAINER</div>
             <div class="credential-value">INVISIBLE TECH</div>
         </a>
-
         <a href="medical.html" class="liquid-glass-card" style="text-decoration: none;">
             <div class="credential-title">MEDICAL CODING</div>
             <div class="credential-value">3D SLICER MODELS</div>
         </a>
-
         <a href="https://www.imdb.com/name/nm12345678/" target="_blank" class="liquid-glass-card" style="text-decoration: none;">
             <div class="credential-title">COMPOSER</div>
             <div class="credential-value">HBO MAX (IMDb)</div>
         </a>
-
         <a href="https://muso.ai/profile/7442aa51-0d8c-48bd-a481-c384c164753a" target="_blank" class="liquid-glass-card" style="text-decoration: none;">
             <div class="credential-title">PUBLISHER</div>
             <div class="credential-value">PRICE ROYALTY</div>
         </a>
-
         <a href="https://www.voices.com/profile/jprice" target="_blank" class="liquid-glass-card" style="text-decoration: none;">
             <div class="credential-title">VOICEOVER</div>
             <div class="credential-value">VOICES.COM</div>
         </a>
-
-        <a href="#identity" class="liquid-glass-card" style="text-decoration: none;">
+        <a href="#hero" class="liquid-glass-card" style="text-decoration: none;">
             <div class="credential-title">TECHNICAL</div>
             <div class="credential-value">DIRECTOR'S NOTE</div>
         </a>
     </div>
 </section>
 
-<section id="showcase" style="padding: 40px 20px; text-align: center;">
-    <h2 class="font-sleek" style="color: #2dd4bf; margin-bottom: 10px;">"808" SYNTHESIS</h2>
+<section id="showcase" style="padding: 40px 15px; text-align: center;">
+    <h2 class="font-sleek" style="color: var(--teal); margin-bottom: 20px; font-size: 1.2rem;">"808" SYNTHESIS</h2>
     <div style="max-width: 800px; margin: 0 auto; border: 1px solid #008080; border-radius: 15px; overflow: hidden; aspect-ratio: 16/9;">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Tq_R-C69HWA" frameborder="0" allowfullscreen></iframe>
     </div>
 </section>
 
-<section id="contact-section" style="padding: 60px 20px;">
-    <div class="liquid-glass-card" style="max-width: 600px; margin: 0 auto; padding: 40px;">
-        <h2 class="font-sleek" style="text-align: center; color: #2dd4bf; margin-top: 0;">CONNECT</h2>
+<section id="contact-section" style="padding: 60px 15px;">
+    <div class="liquid-glass-card" style="max-width: 500px; margin: 0 auto; padding: 35px;">
+        <h2 class="font-sleek" style="text-align: center; color: var(--teal); margin-top: 0; font-size: 1.1rem; letter-spacing: 2px;">CONNECT</h2>
         <form action="https://formspree.io/f/xpqkvyva" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-            <input type="text" name="name" placeholder="FULL NAME" required style="background: rgba(0,0,0,0.2); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px;">
-            <input type="email" name="email" placeholder="EMAIL" required style="background: rgba(0,0,0,0.2); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px;">
-            <textarea name="message" placeholder="MESSAGE" rows="4" required style="background: rgba(0,0,0,0.2); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px;"></textarea>
-            <button type="submit" class="font-sleek" style="background: #008080; color: white; border: none; padding: 15px; cursor: pointer; border-radius: 5px; font-weight: bold;">SUBMIT TRANSMISSION</button>
+            <input type="text" name="name" placeholder="FULL NAME" required>
+            <input type="email" name="email" placeholder="EMAIL" required>
+            <textarea name="message" placeholder="MESSAGE" rows="4" required></textarea>
+            <button type="submit" class="font-sleek" style="font-weight: bold; letter-spacing: 2px;">SUBMIT TRANSMISSION</button>
         </form>
     </div>
 </section>
-<div class="tech-footer">
-<div class="footer-grid">
-<a href="https://www.invisible.co/" target="_blank">AI Trainer (Invisible Tech)</a>
-<a href="https://www.imdb.com/" target="_blank">Composition (HBO Max)</a>
-<a href="https://scale.com/" target="_blank">Annotation (Scale AI)</a>
-<a href="https://www.voices.com/" target="_blank">Voiceover (Voices.com)</a>
-<a href="https://muso.ai/" target="_blank">Publishing (Price Royalty Publishing)</a>
-</div>
-</div>
 
-<footer class="py-12 px-8 border-t border-white/5 bg-black/20">
-<div class="max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-center opacity-30">
-<p class="text-[8px] tracking-[0.5em] uppercase font-bold">© 2026 Jeseka Price</p>
-<div class="flex gap-8 mt-4 md:mt-0">
-<a href="mailto:Price4Hire@gmail.com" class="text-[8px] tracking-[0.5em] uppercase hover:text-teal-400 transition-colors">Direct Email</a>
-<a href="https://github.com/JPriceisRight/Price4Hire.com" target="_blank" class="text-[8px] tracking-[0.5em] uppercase hover:text-teal-400 transition-colors">GitHub</a>
-</div>
-</div>
-</div>
+<footer style="text-align: center; padding: 40px; color: #444; font-size: 10px;" class="font-sleek">
+    &copy; 2026 JESEKA PRICE | PRICE ROYALTY PUBLISHING
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({
-duration: 1500,
-once: false
-});
-
-window.addEventListener('scroll', function() {
-const scroll = window.pageYOffset;
-const bg = document.getElementById('bg-parallax');
-bg.style.transform = `translateY(${scroll * 0.3}px)`;
-});
-
-function toggleQR() {
-const modal = document.getElementById('qr-modal');
-modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
-}
-</script>
 </body>
 </html>
