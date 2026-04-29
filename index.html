@@ -1,239 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-<link rel="icon" type="image/png" href="icon.png">
-<link rel="apple-touch-icon" href="icon.png">
-<link rel="manifest" href="manifest.json">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeseka Price - AI Video Production | ML Specialist | 3D Medical</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root {
---dark-bg: #020617;
---teal-accent: #2dd4bf;
-}
-body {
-font-family: 'Inter', sans-serif;
-background-color: var(--dark-bg);
-color: #f1f5f9;
-overflow-x: hidden;
-}
-.scrolledex-container {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 120%;
-z-index: -2;
-will-change: transform;
-}
-.scrolledex-video {
-width: 100%;
-height: 100%;
-object-fit: cover;
-opacity: 0.35;
-filter: saturate(0.7) brightness(0.5);
-}
-.font-sleek {
-font-family: 'Syncopate', sans-serif;
-letter-spacing: 0.25em;
-font-weight: 400;
-text-transform: uppercase;
-}
-.blue-accent {
-color: var(--teal-accent);
-}
-.nav-blur {
-backdrop-filter: blur(20px);
-background-color: rgba(2, 6, 23, 0.6);
-}
-.form-input {
-width: 100%;
-background-color: rgba(255, 255, 255, 0.05);
-border: 1px solid rgba(255, 255, 255, 0.1);
-padding: 1rem;
-color: white;
-outline: none;
-transition: border-color 0.3s;
-}
-.form-input:focus {
-border-color: var(--teal-accent);
-}
-.credential-title {
-font-size: 10px;
-text-transform: uppercase;
-letter-spacing: 0.2em;
-color: #64748b;
-margin-bottom: 8px;
-}
-.credential-value {
-font-family: 'Syncopate', sans-serif;
-font-size: 14px;
-color: white;
-letter-spacing: 0.1em;
-}
-.liquid-glass-card {
-background: rgba(2, 6, 23, 0.4);
-backdrop-filter: blur(12px);
-border: 1px solid rgba(45, 212, 191, 0.2);
-padding: 2rem;
-transition: all 0.4s ease;
-display: block;
-text-decoration: none;
-}
-.liquid-glass-card:hover {
-background: rgba(45, 212, 191, 0.1);
-border-color: rgba(45, 212, 191, 0.5);
-transform: translateY(-5px);
-}
-.qr-box {
-background: white;
-padding: 10px;
-border-radius: 8px;
-}
-#qr-modal {
-display: none;
-position: fixed;
-inset: 0;
-background: rgba(0,0,0,0.9);
-z-index: 100;
-justify-content: center;
-align-items: center;
-backdrop-filter: blur(10px);
-}
-
-/* Teal Glassmorphism Scrollodex */
-.tech-footer {
-background: rgba(2, 6, 23, 0.6);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-border-top: 1px solid rgba(45, 212, 191, 0.3);
-padding: 20px 0;
-overflow-x: auto;
-white-space: nowrap;
-scrollbar-width: thin;
-scrollbar-color: #2dd4bf #020617;
-position: relative;
-width: 100%;
-}
-.tech-footer::-webkit-scrollbar {
-height: 4px;
-}
-.tech-footer::-webkit-scrollbar-track {
-background: #020617;
-}
-.tech-footer::-webkit-scrollbar-thumb {
-background-color: #2dd4bf;
-border-radius: 10px;
-}
-.footer-grid {
-display: inline-flex;
-gap: 40px;
-padding: 0 40px;
-align-items: center;
-}
-.footer-grid a {
-color: #2dd4bf;
-text-decoration: none;
-text-transform: uppercase;
-letter-spacing: 0.15em;
-font-size: 13px;
-transition: all 0.3s ease;
-}
-.footer-grid a:hover {
-color: #fff;
-text-shadow: 0 0 12px rgba(45, 212, 191, 0.8);
-}
-/* Enhanced Tiffany Blue Outlines & Glow */
-.liquid-glass-card {
-    background: rgba(2, 6, 23, 0.4);
-    backdrop-filter: blur(12px);
-    /* Vibrant Tiffany Blue border to match your footer */
-    border: 1px solid rgba(45, 212, 191, 0.5); 
-    padding: 2rem;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: block;
-    text-decoration: none;
-}
-.liquid-glass-card:hover {
-    background: rgba(45, 212, 191, 0.15);
-    border-color: rgba(45, 212, 191, 1); /* Full brightness on hover */
-    transform: translateY(-8px);
-    /* Sleek glow effect that mirrors the footer text shadow */
-    box-shadow: 0 10px 30px -10px rgba(45, 212, 191, 0.4);
-}  
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price 4 Hire | Technical Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { background-color: #020617; color: white; font-family: 'Inter', sans-serif; margin: 0; }
+        .font-sleek { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
+        
+        /* THE MAGIC GLOW CSS */
+        .liquid-glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 128, 128, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.4s;
+            box-shadow: 0 0 15px rgba(0, 128, 128, 0.1);
+        }
+        .liquid-glass-card:hover {
+            border-color: #2dd4bf;
+            box-shadow: 0 0 25px rgba(45, 212, 191, 0.2);
+            transform: translateY(-5px);
+        }
+        .credential-title { color: #888; font-size: 10px; letter-spacing: 2px; margin-bottom: 5px; font-weight: bold; }
+        .credential-value { color: #2dd4bf; font-size: 13px; font-weight: 700; }
+    </style>
 </head>
 <body>
-    
-<div id="qr-modal" onclick="toggleQR()">
-<div class="space-y-6 flex flex-col items-center text-center">
-<div class="qr-box">
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://price4hire.com" alt="Price 4 Hire QR">
-</div>
-<p class="font-sleek text-[10px] blue-accent tracking-widest">Scan to Connect</p>
-<p class="text-[8px] text-slate-500 uppercase tracking-widest">Tap anywhere to close</p>
-</div>
-</div>
 
-<div class="scrolledex-container" id="bg-parallax">
-<video autoplay loop muted playsinline class="scrolledex-video">
-<source src="hero-bg.mp4" type="video/mp4">
-</video>
-</div>
-
-<nav class="fixed w-full z-50 nav-blur border-b border-white/5">
-<div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
-<a href="https://credits.muso.ai/profile/7442aa51-0d8c-48bd-a481-c384c164753a" target="_blank" class="font-sleek text-xs blue-accent tracking-[0.4em]">Price Royalty</a>
-<div class="hidden md:flex space-x-12 text-[9px] tracking-[0.5em] uppercase font-bold text-slate-500 items-center">
-<a href="#about" class="hover:text-white transition-all">Identity</a>
-<a href="#showcase" class="hover:text-white transition-all">Works</a>
-<a href="#credits" class="hover:text-white transition-all">Credits</a>
-<a href="#contact-section" class="hover:text-teal-400 transition-all">Contact</a>
-<button onclick="toggleQR()" class="px-3 py-1 border border-teal-500/30 rounded text-teal-400 hover:bg-teal-400 hover:text-black transition-all">QR</button>
-</div>
-</div>
-</nav>
-
-<section class="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
-<div class="z-10" data-aos="fade-up">
-<p class="text-[9px] tracking-[0.6em] uppercase text-teal-500/50 mb-6 font-bold">Master AI Video Production  Machine Learning Specialist  Medical Coding into 3D Design</p>
-
-<h1 class="font-sleek text-3xl md:text-5xl mb-6 leading-tight">Jeseka <span class="blue-accent opacity-90">Price</span></h1>
-<div class="w-16 h-[1px] bg-teal-500/20 mx-auto mb-10"></div>
-<p class="text-xs md:text-sm text-slate-400 mb-12 max-w-xl mx-auto font-light leading-relaxed tracking-widest uppercase opacity-80">
-Refining Multimodal Physics for the Next Era of Generative Intelligence.
-</p>
-<div class="flex flex-col md:flex-row gap-10 justify-center items-center">
-<a href="#showcase" class="text-[9px] tracking-[0.4em] uppercase border-b border-teal-500/30 pb-2 hover:border-teal-500 transition-all">Showcase</a>
-<a href="#contact-section" class="px-10 py-3 bg-white text-black text-[9px] tracking-[0.4em] uppercase font-bold hover:bg-teal-400 transition-all shadow-xl shadow-teal-500/10">Price 4 Hire</a>
-</div>
-</div>
-<section id="credits" style="padding: 40px 20px;">
-    <h2 class="font-sleek" style="text-align: center; color: #2dd4bf; margin-bottom: 30px;">PROFESSIONAL CREDITS</h2>
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto;">
-       
-        <div class="liquid-glass-card">
-            <div class="credential-title">AI TRAINER</div>
-            <div class="credential-value">INVISIBLE TECH</div>
-        </div>
-
-   <a href="medical.html" class="liquid-glass-card" style="text-decoration: none;">
-            <div class="credential-title">MEDICAL CODING</div>
-            <div class="credential-value">3D SLICER MODEL</div>
-        </a>
-
-        <a href="https://www.imdb.com/name/nm12345678/" target="_blank" class="liquid-glass-card" style="text-decoration: none;">
-            <div class="credential-title">COMPOSER</div>
-            <div class="credential-value">HBO MAX (IMDB)</div>
-        </a>
-
-       <section id="credits" style="padding: 40px 20px;">
-    <h2 class="font-sleek" style="text-align: center; color: #2dd4bf; margin-bottom: 30px; letter-spacing: 2px;">PROFESSIONAL CREDITS</h2>
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto;">
+<section id="credits" style="padding: 60px 20px;">
+    <h2 class="font-sleek" style="text-align: center; color: #2dd4bf; margin-bottom: 40px; letter-spacing: 3px;">PROFESSIONAL CREDITS</h2>
+    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; max-width: 1100px; margin: 0 auto;">
         
         <a href="https://www.invisible.co/" target="_blank" class="liquid-glass-card" style="text-decoration: none;">
             <div class="credential-title">AI TRAINER</div>
@@ -269,20 +70,19 @@ Refining Multimodal Physics for the Next Era of Generative Intelligence.
 
 <section id="showcase" style="padding: 40px 20px; text-align: center;">
     <h2 class="font-sleek" style="color: #2dd4bf; margin-bottom: 10px;">"808" SYNTHESIS</h2>
-    <p style="color: #888; font-size: 10px; letter-spacing: 2px; margin-bottom: 25px;">EVALUATION OF AUDIO-VISUAL ALIGNMENT</p>
-    <div style="max-width: 800px; margin: 0 auto; border: 1px solid #008080; border-radius: 15px; overflow: hidden; box-shadow: 0 0 20px rgba(0, 128, 128, 0.2);">
-        <iframe width="100%" height="450" src="https://www.youtube.com/embed/Tq_R-C69HWA" frameborder="0" allowfullscreen></iframe>
+    <div style="max-width: 800px; margin: 0 auto; border: 1px solid #008080; border-radius: 15px; overflow: hidden; aspect-ratio: 16/9;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Tq_R-C69HWA" frameborder="0" allowfullscreen></iframe>
     </div>
 </section>
 
-<section id="contact-section" style="padding: 40px 20px;">
-    <div class="liquid-glass-card" style="max-width: 600px; margin: 0 auto; padding: 30px;">
-        <h2 class="font-sleek" style="text-align: center; color: #2dd4bf; margin-top: 0;">CONNECT WITH JESEKA</h2>
+<section id="contact-section" style="padding: 60px 20px;">
+    <div class="liquid-glass-card" style="max-width: 600px; margin: 0 auto; padding: 40px;">
+        <h2 class="font-sleek" style="text-align: center; color: #2dd4bf; margin-top: 0;">CONNECT</h2>
         <form action="https://formspree.io/f/xpqkvyva" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-            <input type="text" name="name" placeholder="FULL NAME" required style="background: rgba(255,255,255,0.05); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px;">
-            <input type="email" name="email" placeholder="EMAIL ADDRESS" required style="background: rgba(255,255,255,0.05); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px;">
-            <textarea name="message" placeholder="PROJECT DETAILS" rows="4" required style="background: rgba(255,255,255,0.05); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px;"></textarea>
-            <button type="submit" class="font-sleek" style="background: #008080; color: white; border: none; padding: 15px; cursor: pointer; border-radius: 5px; letter-spacing: 2px;">SUBMIT TRANSMISSION</button>
+            <input type="text" name="name" placeholder="FULL NAME" required style="background: rgba(0,0,0,0.2); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px;">
+            <input type="email" name="email" placeholder="EMAIL" required style="background: rgba(0,0,0,0.2); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px;">
+            <textarea name="message" placeholder="MESSAGE" rows="4" required style="background: rgba(0,0,0,0.2); border: 1px solid #008080; padding: 12px; color: white; border-radius: 5px;"></textarea>
+            <button type="submit" class="font-sleek" style="background: #008080; color: white; border: none; padding: 15px; cursor: pointer; border-radius: 5px; font-weight: bold;">SUBMIT TRANSMISSION</button>
         </form>
     </div>
 </section>
