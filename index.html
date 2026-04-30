@@ -63,6 +63,20 @@
 <section id="credits" style="padding: 60px 15px;">
     <h2 class="font-sleek" style="text-align: center; color: var(--teal); margin-bottom: 40px; letter-spacing: 3px; font-size: 1.2rem;">PROFESSIONAL CREDITS</h2>
     <div class="grid">
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  gap: 20px; /* Space between the items */
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the grid */
+}
+
+/* Stacks them neatly into a single column on mobile screens */
+@media (max-width: 768px) {
+  .credits-grid {
+    grid-template-columns: 1fr;
+  }
+}
         <a href="https://www.invisible.co/" target="_blank" class="liquid-glass-card" style="text-decoration: none;">
             <div class="credential-title">AI TRAINER</div>
             <div class="credential-value">INVISIBLE TECH</div>
